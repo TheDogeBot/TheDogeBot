@@ -228,7 +228,7 @@ def javess(**args):
             except BaseException:
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-                    text = "**JAVES ERROR REPORT**\n"
+                    text = "**THEDOGEBOT ERROR REPORT**\n"
                     text += "Send this to @TheDogeBot69 if you cant find issue\n"
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded only logchat,"                
