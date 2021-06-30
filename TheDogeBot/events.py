@@ -1,2 +1,2 @@
-from userbot.javes_main.commands import *
+from TheDogeBot.dogebot_main.commands import *
 
