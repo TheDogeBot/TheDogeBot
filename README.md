@@ -1,6 +1,6 @@
 
 ## What is TheDogeBot?
-Javes is a telgram userbot that running in python3 + Telethon ,  Born from <a href="https://github.com/AvinashReddy3108/PaperplaneExtended">PaperplaneExtended</a> 
+TheDogeBot is a telgram userbot that running in python3 + Telethon ,  Born from <a href="https://github.com/AvinashReddy3108/PaperplaneExtended">PaperplaneExtended</a> 
 
 
 ## Tap this img to deploy TheDogeBot in heroku
