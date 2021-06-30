@@ -1,3 +1,5 @@
+
+
 import os
 from sys import version_info
 from logging import basicConfig, getLogger, INFO, DEBUG, WARNING
@@ -9,7 +11,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 from var import Var
 load_dotenv("config.env")
-from userbot.dogebot_main.heroku_var import config
+from TheDogeBot.dogebot_main.heroku_var import config
 
 CONSOLE_LOGGER_VERBOSE = config.CONSOLE_LOGGER_VERBOSE
 basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
@@ -41,7 +43,7 @@ OPEN_WEATHER_MAP_APPID = config.OPEN_WEATHER_MAP_APPID
 WEATHER_DEFCITY = config.WEATHER_DEFCITY
 LYDIA_API_KEY = config.LYDIA_API_KEY
 PM_MESSAGE = config.PM_MESSAGE
-TheDogeBot_NAME = config.TheDogeBot_NAME
+DOGEBOT_NAME = config.DOGEBOT_NAME
 ANTI_SPAMBOT = config.ANTI_SPAMBOT
 ANTI_SPAMBOT_SHOUT = config.ANTI_SPAMBOT_SHOUT
 YOUTUBE_API_KEY = config.YOUTUBE_API_KEY
@@ -67,12 +69,12 @@ TEMP_DOWNLOAD_DIRECTORY = config.TEMP_DOWNLOAD_DIRECTORY
 
 
     
-from userbot import ALIVE_NAME
-from userbot import DEFAULTUSER
-TheDogeBot_MSG = (f"TheDogeBot ")
+from TheDogeBot import ALIVE_NAME
+from TheDogeBot import DEFAULTUSER
+JAVES_MSG = (f"TheDogeBot ")
 ORI_MSG = (f"Hello Sir, I can't allow you to {ALIVE_NAME}'s PM without his permissions please be patient, Thankyou ")
 BLOCK_MSG = (f"I am not going to allow you to spam {DEFAULTUSER}'s PM, You have been blocked ")
-TheDogeBot_NNAME = str(TheDogeBot_NAME) if TheDogeBot_NAME else str(TheDogeBot_MSG)
+JAVES_NNAME = str(DOGEBOT_NAME) if DOGEBOT_NAME else str(JAVES_MSG)
 AFK_MSG = (f"Hello Sir, {DEFAULTUSER} is offline Just leave Your message, Thankyou!")
 BIO_MSG = (f"")
 ALIVE_S_MSG = (f"Iam Alive!")
@@ -104,7 +106,7 @@ if S3:
 if BOT_TOKEN:    
     tebot = TelegramClient("bot", API_KEY, API_HASH).start(bot_token=BOT_TOKEN)
 
-borg = bot = TheDogeBot = client
+borg = bot = javes = client
 COUNT_MSG = 0
 USERS = {}
 COUNT_PM = {}
@@ -115,3 +117,5 @@ LOAD_PLUG = {}
 ISAFK = None
 AFKREASON = None
 INT_PLUG = ""
+
+
