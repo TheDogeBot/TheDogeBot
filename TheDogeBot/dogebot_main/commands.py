@@ -8,7 +8,7 @@ from os import remove
 from time import gmtime, strftime
 from traceback import format_exc
 from typing import List
-from userbot.javes_main.heroku_var import *
+from userbot.doge_main.heroku_var import *
 from userbot import *
 from sys import *
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -169,7 +169,7 @@ def rekcah05(pattern=None, **args):
     is_message_enabled = True
     return events.NewMessage(**args)
     
-def javess(**args):
+def TheDogeBots(**args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -228,8 +228,8 @@ def javess(**args):
             except BaseException:
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-                    text = "**JAVES ERROR REPORT**\n"
-                    text += "Send this to @javes05 if you cant find issue\n"
+                    text = "**TheDogeBot ERROR REPORT**\n"
+                    text += "Send this to @TheDogeBot05 if you cant find issue\n"
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded only logchat,"                
                     ftext += "\nreport to admin this error if you cant find any issue"
@@ -255,12 +255,12 @@ def javess(**args):
                     result = str(stdout.decode().strip()) \
                         + str(stderr.decode().strip())
                     ftext += result
-                    file = open("javes_error.log", "w+")
+                    file = open("TheDogeBot_error.log", "w+")
                     file.write(ftext)
                     file.close()
                     try:                 
-                      await check.client.send_file(send_to, "javes_error.log", caption=text)
-                      remove("javes_error.log")
+                      await check.client.send_file(send_to, "TheDogeBot_error.log", caption=text)
+                      remove("TheDogeBot_error.log")
                     except:
                       pass
                     
@@ -277,7 +277,7 @@ def javess(**args):
     return decorator
 
 
-borg = javes = bot ; admin_cmd = rekcah05 ; command = zzaacckkyy ; register = javes05 = javess
+borg = TheDogeBot = bot ; admin_cmd = TheDogeBot ; command = zzaacckkyy ; register = TheDogeBot05 = TheDogeBots
 
 
 def errors_handler(func):
@@ -344,7 +344,7 @@ class Loader():
         bot.add_event_handler(func, events.NewMessage(**args))
 
 
-data = json.load(open("userbot/javes_main/extra/meaning.json")) 
+data = json.load(open("userbot/doge_main/extra/meaning.json")) 
 def meaning(w): 
 	w = w.lower() 
 	if w in data: 
