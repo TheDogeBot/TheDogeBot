@@ -6,7 +6,7 @@ from importlib import import_module
 
 
 #####################################
-plugin_channel = "@pldhsys"  #this is official plugin channel for javes 
+plugin_channel = "@pldhsys"  #this is official plugin channel for TheDogeBot 
 #####################################
 
 
@@ -45,14 +45,13 @@ async def a():
      import_module(f"TheDogeBot.modules.{cr}")
      la += 1
      LOGS.info(f" loaded {la}/{f} modules")  
-  os.system("rm TheDogeBot/modules/*.py") ; LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
+  os.system("rm TheDogeBot/modules/*.py") ; LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !TheDogeBot in any client's chat, type  !help for more info.")
   if len(argv) not in (1, 3, 4):
-       await javes.disconnect()
+       await TheDogeBot.disconnect()
   else:
-       await javes.run_until_disconnected()
+       await TheDogeBot.run_until_disconnected()
        
 
         
 
-javes.loop.run_until_complete(a())
-
+TheDogeBot.loop.run_until_complete(a())
