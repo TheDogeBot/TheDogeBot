@@ -1,5 +1,5 @@
 from sqlalchemy import Column, UnicodeText, LargeBinary, Numeric, String
-from userbot.modules.sql_helper import SESSION, BASE
+from TheDogeBot.modules.sql_helper import SESSION, BASE
 
 
 class rkfilters(BASE):
