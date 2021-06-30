@@ -344,7 +344,7 @@ class Loader():
         bot.add_event_handler(func, events.NewMessage(**args))
 
 
-data = json.load(open("TheDogeBot.dogebot_main/extra/meaning.json")) 
+data = json.load(open("TheDogeBot/dogebot_main/extra/meaning.json")) 
 def meaning(w): 
 	w = w.lower() 
 	if w in data: 
