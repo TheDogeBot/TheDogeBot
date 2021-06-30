@@ -1,4 +1,4 @@
-from TheDogeBot import * ;  from sys import * ; from telethon import TelegramClient, functions, types ; from telethon.tl.types import InputMessagesFilterDocument ; from pathlib import Path; from TheDogeBot.dogebot_main.commands import * ; import asyncio, os, traceback, sys, traceback, os, importlib, glob ; TheDogeBot = tgbot = bot.tgbot = client 
+from TheDogeBot import * ;  from sys import * ; from telethon import TelegramClient, functions, types ; from telethon.tl.types import InputMessagesFilterDocument ; from pathlib import Path; from TheDogeBot.dogebot_main.commands import * ; import asyncio, os, traceback, sys, traceback, os, importlib, glob ; javes = tgbot = bot.tgbot = client 
 from telethon.tl.types import InputMessagesFilterDocument
 from importlib import import_module
 
@@ -6,7 +6,7 @@ from importlib import import_module
 
 
 #####################################
-plugin_channel = "@pldhsys"  #this is official plugin channel for TheDogeBot 
+plugin_channel = "@pldhsys"  #this is official plugin channel for javes 
 #####################################
 
 
@@ -45,13 +45,14 @@ async def a():
      import_module(f"TheDogeBot.modules.{cr}")
      la += 1
      LOGS.info(f" loaded {la}/{f} modules")  
-  os.system("rm TheDogeBot/modules/*.py") ; LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !TheDogeBot in any client's chat, type  !help for more info.")
+  os.system("rm TheDogeBot/modules/*.py") ; LOGS.info(f"Sucessfully connected with {o}{o2}{o3}{o4} check it by typing !javes in any client's chat, type  !help for more info.")
   if len(argv) not in (1, 3, 4):
-       await TheDogeBot.disconnect()
+       await javes.disconnect()
   else:
-       await TheDogeBot.run_until_disconnected()
+       await javes.run_until_disconnected()
        
 
         
 
-TheDogeBot.loop.run_until_complete(a())
+javes.loop.run_until_complete(a())
+
