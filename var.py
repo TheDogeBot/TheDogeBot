@@ -1,2 +1,2 @@
-from userbot.dogebot_main.heroku_var import config
+from TheDogeBot.dogebot_main.heroku_var import config
 Var = config
