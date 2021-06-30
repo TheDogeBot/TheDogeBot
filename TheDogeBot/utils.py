@@ -1,3 +1,3 @@
-from userbot import bot as borg
-from userbot.events import *
+from TheDogeBot import bot as borg
+from TheDogeBot.events import *
 
