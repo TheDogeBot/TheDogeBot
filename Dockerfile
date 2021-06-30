@@ -1,4 +1,3 @@
-
 FROM python:3.8-slim-buster
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y
 
@@ -56,12 +55,12 @@ RUN apt-get install -y\
 
 RUN pip3 install --upgrade pip setuptools 
 RUN pip3 install --upgrade pip install wheel 
-RUN git clone https://github.com/rekcah-pavi/javes /root/userbot
+RUN git clone https://github.com/TheDogeBot/TheDogeBot /root/userbot
 RUN mkdir /root/userbot/bin/
 WORKDIR /root/userbot/
-RUN mv userbot/javes_main/extra/apktool /usr/local/bin
-RUN mv userbot/javes_main/extra/apktool.jar /usr/local/bin
-#RUN mv userbot/javes_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
+RUN mv userbot/dogebot_main/extra/apktool /usr/local/bin
+RUN mv userbot/dogebot_main/extra/apktool.jar /usr/local/bin
+#RUN mv userbot/dogebot_main/extra/apk.rb /usr/share/metasploit-framework/lib/msf/core/payload
 RUN chmod +x /usr/local/bin/*
 RUN python3 -m pip install --no-warn-script-location --no-cache-dir --upgrade -r requirements.txt
 RUN sudo chmod o+r /usr/lib/python3/dist-packages/*
