@@ -1,11 +1,11 @@
 config.env
 __pycache__/*
-userbot.db
-userbot.session
-userbot.session-journal
-userbot/__pycache__/*
-userbot/modules/__pycache__/*
-userbot/modules/sql_helper/__pycache__/*
+TheDogeBot.db
+TheDogeBot.session
+TheDogeBot.session-journal
+TheDogeBot/__pycache__/*
+TheDogeBot/modules/__pycache__/*
+TheDogeBot/modules/sql_helper/__pycache__/*
 .progress
 .vscode/*
 bin/*
