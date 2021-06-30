@@ -4,7 +4,7 @@ TheDogeBot is a telgram userbot that running in python3 + Telethon ,  Born from 
 
 
 ## Tap this img to deploy TheDogeBot in heroku
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTheDogeBot%2FTheDogeBot&template=https%3A%2F%2Fgithub.com%2FTheDogeBot%2FTheDogeBot"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Javes" /></a></p>
+<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FTheDogeBot%2FTheDogeBot&template=https%3A%2F%2Fgithub.com%2FTheDogeBot%2FTheDogeBot"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="TheDogeBot" /></a></p>
 
 
 ## Doc for make your own TheDogeBot
